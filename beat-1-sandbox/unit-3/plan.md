@@ -532,6 +532,14 @@ WEBHOOK_ALLOW_PRIVATE_URLS=true
 
 ## Deviations
 
-  
+The design held: same endpoints, events, signing, and SSRF approach. These implementation details changed:
 
-[To be filled after implementation: what changed between this plan and the change I built, and why. If nothing changed, I'll say the plan held.]
+- **Dispatch uses two short database sessions** instead of one, so a connection isn't held open through up to ~20s of retries.
+- **Added `await db.rollback()`** before marking a review failed in the catch-all `except`; otherwise a database error leaves the session unusable and `review.failed` is never sent.
+- **Stricter URL check:** also rejects any address that isn't `is_global`, which catches CGNAT (`100.64.0.0/10`).
+- **3xx responses are permanent failures** (not retried), where the plan only said redirects aren't followed.
+- **Timeout test uses a mocked client** raising `httpx.ReadTimeout`, since a slow pytest-httpserver handler leaked into the next test.
+- **Ownership is tested at the route and the service** (compiled SQL filters on `webhooks.user_id`), since unit tests have no real database.
+- **`user_id` is typed `UUID | str`** rather than extending the mypy arg-type override.
+- **Test typing fix:** annotated the fake store in `test_webhook_routes.py` to pass mypy and ruff.
+- **Setup:** migration 003 is applied with `make migrate`, not `make setup` as section 9 said.
