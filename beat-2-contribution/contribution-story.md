@@ -10,7 +10,7 @@ files and no evidence uploads are part of Assignment 5.
 **Contribution Number:** [1]
 **Student:** [Kevin Kuang]
 **GitHub Username:** [kevku]
-**Issue:** [GitHub issue link]
+**Issue:** [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/issues/27211]
 **Pull Request:** [GitHub PR link, once opened]
 
 One repository, built across units 5 to 8, telling the whole story of your real
@@ -60,9 +60,7 @@ The tool I built was issue-scout which was an expansion of the issue-selection t
 
 **Unit 6: [one line on the tool work]**
 
-[2-4 sentences: the voice-guard, the repo-memory file. What broke or
-fell short, and what changed because of it. "Nothing broke" counts when
-it is true - say how you know.]
+The voice-guard skill checks on how I should sound when making a claim, comment, nudge, or asking a question. It provides an extra safety check of my voice in public and ensures that I stay professional. What I had to change from my voice-guard is ensuring that I said Thank You for the issue-claim since many of the other claims from other contributors didn't have to say thank you.
 
 **Unit 7: [one line on the tool work]**
 
