@@ -68,8 +68,7 @@ ship-gate double checks the draft of my pr and lets me know if it passes my rubr
 
 **Unit 8: [one line on the tool work]**
 
-[2-4 sentences: the PR-monitor and your playbook. What it read, what it
-drafted, what you did with the draft.]
+pr-monitor checks on the current branch's PR and notifies the state. It provides any recent activity and suggests whether I should nudge or I need to address a comment. I set the rules where if they don't notice it within the next 1-2 weeks, I make a nudge to the reviewer about the PR. It also ensures the nudging and pinging format is correct and lets me know what's wrong with the nudge I'm about to make.
 
 ---
 
@@ -443,25 +442,23 @@ AI was used to help understand the structure of the mods and functions.
 
 **Technical Skills Gained**
 
-[What you learned technically, named concretely.]
+One thing I learned about Java was during the testing phase after implementation. Generally, it was easy to test independently with `./gradlew runClient21`. But when doing this, most of the original behaviors act the same since both mods rely on each other. `Railcraft` mod relies on `NewHorizonsCoreMod` to set the new recipe and `Railcraft` needs to set the content when `NewHorizonsCoreMod` makes the setter call. Then when launching the modpack with the new changes I ran into a versioning issue with what was registered. I learned that you need to push a local Maven change of `Railcraft` and then in the `NewHorizonsCoreMod`, `gradle.dependencies` add the local maven to apply those changes. This taught me how these `jar` files work interconnectedly during development.
 
 **Challenges Overcome**
 
-[What was hard and how you solved it; point at the real events, the
-Toolkit blocks above are full of them.]
+What I found a bit difficult was understanding how the mods within the modpack integrates with each other. I was confused as to how recipes and properties are transferred from one mod to another. After having AI help me understand the structure of the modpack and learning that the `NewHorizonsCoreMod` is the bridge and requiring the mods itself like `Railcraft`. Originally I was not sure how the recipe integrated where an item like the `tank` from `BC Factory` turns into the `tank cart` from `Railfactory`.
 
 **What I'd Do Differently Next Time**
 
-[Reflection on your process.]
+Next time I'll need to be more careful of the modpack version, and each of the individual mod versions because when plugging back into the main modpack, I had to temporarily pull an older version of the mod, make the changes, build the mod and test in the full modpack. The developer version of the mods off of Github may be many commits ahead and the documentation of the version will not be official.
 
 ---
 
 ## Resources Used
 
-[What actually helped, not a reading list. List things this story
-already shows you using: the doc you followed to set the environment
-up, the thread that explained the bug, the person who answered you.
-One real entry beats ten plausible ones.]
+The Wiki from GTNH gave me the information on how to get the developer's version of the mod running and how to troubleshoot common issues with Gradle. Additionally, it gave information on how to get build running and the format of contributing. Then the comment gave a massive hint on where to start the issue.
 
-- [Link to documentation that helped]
-- [Discussion, issue, or post that helped]
+- [GTNH Wiki](https://wiki.gtnewhorizons.com/wiki/Main_Page)
+- [GTNH Contribution](https://wiki.gtnewhorizons.com/wiki/GTNH_Contribution_Guide_for_Beginners)
+- [GTNH Development](https://wiki.gtnewhorizons.com/wiki/Development)
+- [Comment that Lead to the Bug](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/issues/27211#issuecomment-6557974136)
