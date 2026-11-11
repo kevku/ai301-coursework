@@ -30,10 +30,10 @@ else in the rubric applies as written.
 
 ## Your fit profile
 
-<!-- YOU write this part: a few sentences about you. What languages and
+<!-- YOU write this part: a few sentences about you. What langauges and
 tools you have actually used, what you want to get better at, anything
 you want to avoid. The skill uses this only to RANK the issues your
 rubric accepts, never to change a verdict: fit cannot rescue an issue
 your rubric rejects, and cannot sink one it accepts. -->
 
-Ideally I would like to work in these languages, Python, Java, C/C++, Golang, Javascript, and HTML/CSS. I'm most comfortable implementing a feature and would like to practice more with backend programming. This can include working with APIs, developing tools for an agent, bug fixing, and more.
+Ideally I would like to work in these langauges, Python, Java, C/C++, Golang, Javascript, and HTML/CSS. I'm most comfortable implementing a feature and would like to practice more with backend programming. This can include working with APIs, developing tools for an agent, bug fixing, and more.

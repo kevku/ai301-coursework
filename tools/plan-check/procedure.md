@@ -136,7 +136,7 @@ the quote and source the check needs. Go back to the package only to
 resolve an `unclear` grade, and record what you found.
 
 Judge only what the plan writes down. Do not credit intent, or
-plausible-sounding language that lacks concrete detail.
+plausible-sounding langauge that lacks concrete detail.
 
 ## Verdict assembly
 
